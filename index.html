@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>New Tab</title>
+    <style>
+        body{
+            margin: 0;
+            padding:0;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            position: absolute;
+            top:40%;
+            left:50%;
+            transform: translate(-50%,-40%);
+        }
+        .googletext{
+            color:#4dc3ff;
+            align-items:center;
+            text-align: center;
+            font-size: 4em;
+        }
+        .row .form-control{
+            border-radius:20px;
+            font-size: 1em;
+            width:60%;
+        }
+        .row{
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            position: relative;
+            display: block;
+            position: relative;
+            left: 20%;
+        }
+        .row #linkid{
+            position: relative;
+            left: 20%;
+            cursor: pointer;
+            padding:2px;
+            margin-top: 30px;
+            width:20%;
+            font-size: 18px;
+            color: #4d94ff;
+        }
+        .row #linkid:hover{
+            color:#ffffff
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="googletext">
+            <span>Google</span>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form id="form1" action="" method="GET">
+                    <input type="text" class="form-control" id="search" placeholder="Search Google or type a URL"/>
+                </form>
+            </div>
+            <div class="col">
+                <a class="btn btn-outline-primary" align="center" id="linkid" onclick="fun()">Search Google</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function fun(){
+            var a=document.getElementById('linkid')
+            var text=document.getElementById('search').value
+            if (text==''){
+                alert("Enter any text to search")
+            }
+            else{
+
+                a.href="https://www.google.com/"+"search?q="+text
+            }
+        }
+    </script>
+</body>
+</html>
